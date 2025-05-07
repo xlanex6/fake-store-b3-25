@@ -32,7 +32,7 @@ import { onMounted, ref, onUnmounted } from 'vue';
 defineProps({
   loading: {
     type: Boolean,
-    default: false
+    default: true
   }
 });
 </script>
