@@ -10,11 +10,13 @@
 
 <script setup>
 
-defineProps({
-  cart: {
-    type: Array,
-    default: () => []
-  }
-});
+import { cart } from '../state.ts';
+
+// defineProps({
+//   cart: {
+//     type: Array,
+//     default: () => []
+//   }
+// });
 
 </script>

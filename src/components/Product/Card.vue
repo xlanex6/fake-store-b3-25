@@ -10,7 +10,7 @@
         <Price :price="product.price" />
       </div>
 
-      <AddToCart @addToCartCta="$emit('addToCart', product)" />
+      <AddToCart @addToCartCta="addToCart(product)" />
       
     </div>
   </div>
@@ -21,21 +21,11 @@ import Rating from "./Rating.vue";
 import Price from "./Price.vue";
 import AddToCart from "./AddToCart.vue";
 
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: Rating;
-}
-interface Rating {
-  rate: number;
-  count: number;
-}
-defineEmits(['addToCart']);
-const props = defineProps<{
+import { Product }  from '../../types/products';
+
+import { addToCart } from '../../state';
+
+defineProps<{
   product: Product;
 }>();
 </script>

@@ -6,11 +6,7 @@ import Cart from "../components/Cart.vue";
 
 const loading = ref(false);
 const products = ref([]);
-const cart = ref([]);
 
-const addToCart = (product) => {
-  cart.value.push(product);
-};
 
 onMounted(async () => {
   loading.value = true;
@@ -29,11 +25,11 @@ onMounted(async () => {
   <Loading :loading />
   <div class="container relative pt-16 mx-auto">
 
-    <Cart :cart />
+    <Cart />
 
     <section id="users-list" class="grid grid-cols-2 md:grid-cols-4">
 
-      <Card v-for="product in products" :key="product.id" :product @add-to-cart="addToCart" />
+      <Card v-for="product in products" :key="product.id" :product />
 
     </section>
 
