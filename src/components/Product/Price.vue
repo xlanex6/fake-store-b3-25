@@ -1,5 +1,5 @@
 <template>
-  <p class="text-gray-800 font-bold mt-2">{{ displayPrice }} €</p>
+  <p class="mt-2 font-bold text-gray-800">{{ displayPrice }} €</p>
 </template>
 
 <script setup>
@@ -7,7 +7,7 @@ import { computed } from 'vue';
 const props = defineProps({
   price: {
     type: Number,
-    required: true
+    required: false
   }
 });
 
